@@ -132,65 +132,78 @@ wn.onkeyrelease(stop_left_right, "Right")
 
 
 #place the boxes
+
+
+level1 = (
+    (-600, 0, 2, 800),
+    (600, 0, 2, 800),
+    (0, -370, 1200,2),
+    (-550, 300, 100, 2),
+    (-500, 275, 2, 50),
+    (-550, 250,100, 2),
+    (-550, 175,150, 2),
+    (-476, 136, 2, 75),
+    (-380, 320, 2, 150),
+    (-370, 245, 100, 2),
+    (-190, 245, 100, 2),
+    (-140, 320, 2, 150),
+    (-252, 175,300, 2),
+    (-425, 98,100, 2),
+    (-170, 98,290, 2),
+    (-376, 58,2, 77),
+    (-25, 250, 2, 300),
+    (-314, 23,2,150),
+    (-400, 15,50,2),
+    (-550, 15,100,2),
+    (-402,-50,178,2),
+    (-491,-100,2,100),
+    (-420,-150,140,2),
+    (-500,-250,250,2),
+    (-170,-250,259,2),
+    (-230,-140,2,470),
+    (-140,-120,2,245),
+    (-40,5,200,2),
+    (60,-35,2,680),
+    (159,308,200,2),
+    (-255,-190,40,2),
+    (-264,-100,60,2),
+    (36,-310,50,2),
+    (36,-200,50,2),
+    (41,150,40,2),
+    (-5,308,40,2),
+    (-100,-170,80,2),
+    (20,-110,80,2),
+    (240,230,200,2),
+    (340,230,2,155),
+    (200,150,280,2),
+    (415,308,150,2),
+    (490,210,2,190),
+    (575,230,50,2),
+    (335,50,550,2),
+    (460,115,60,2),
+    (370,180,60,2),
+    (270,-270,2,195),
+    (210,-310,120,2),
+    (122,-240,120,2),
+    (290,-170,270,2),
+    (540,-170,110,2),
+    (475,-310,250,2),
+    (440,-240,180,2),
+    (350,-275,2,70),
+    (280,-100,436,2),
+    (450,-30,300,2),
+    (200,-25,2,150)
+
+)
+
 blocks = []
-blocks.append(Block(-600, 0, 2, 800))
-blocks.append(Block(600, 0, 2, 800))
-blocks.append(Block(0, -370, 1200,2))
-blocks.append(Block(-550, 300, 100, 2))
-blocks.append(Block(-500, 275, 2, 50))
-blocks.append(Block(-550, 250,100, 2))
-blocks.append(Block(-550, 175,150, 2))
-blocks.append(Block(-476, 136, 2, 75))
-blocks.append(Block(-380, 320, 2, 150))
-blocks.append(Block(-370, 245, 100, 2))
-blocks.append(Block(-190, 245, 100, 2))
-blocks.append(Block(-140, 320, 2, 150))
-blocks.append(Block(-252, 175,300, 2))
-blocks.append(Block(-425, 98,100, 2))
-blocks.append(Block(-170, 98,290, 2))
-blocks.append(Block(-376, 58,2, 77))
-blocks.append(Block(-25, 250, 2, 300))
-blocks.append(Block(-314, 23,2,150))
-blocks.append(Block(-400, 15,50,2))
-blocks.append(Block(-550, 15,100,2))
-blocks.append(Block(-402,-50,178,2))
-blocks.append(Block(-491,-100,2,100))
-blocks.append(Block(-420,-150,140,2))
-blocks.append(Block(-500,-250,250,2))
-blocks.append(Block(-170,-250,259,2))
-blocks.append(Block(-230,-140,2,470))
-blocks.append(Block(-140,-120,2,245))
-blocks.append(Block(-40,5,200,2))
-blocks.append(Block(60,-35,2,680))
-blocks.append(Block(159,308,200,2))
-blocks.append(Block(-255,-190,40,2))
-blocks.append(Block(-264,-100,60,2))
-blocks.append(Block(36,-310,50,2))
-blocks.append(Block(36,-200,50,2))
-blocks.append(Block(41,150,40,2))
-blocks.append(Block(-5,308,40,2))
-blocks.append(Block(-100,-170,80,2))
-blocks.append(Block(20,-110,80,2))
-blocks.append(Block(240,230,200,2))
-blocks.append(Block(340,230,2,155))
-blocks.append(Block(200,150,280,2))
-blocks.append(Block(415,308,150,2))
-blocks.append(Block(490,210,2,190))
-blocks.append(Block(575,230,50,2))
-blocks.append(Block(335,50,550,2))
-blocks.append(Block(460,115,60,2))
-blocks.append(Block(370,180,60,2))
-blocks.append(Block(270,-270,2,195))
-blocks.append(Block(210,-310,120,2))
-blocks.append(Block(122,-240,120,2))
-blocks.append(Block(290,-170,270,2))
-blocks.append(Block(540,-170,110,2))
-blocks.append(Block(475,-310,250,2))
-blocks.append(Block(440,-240,180,2))
-blocks.append(Block(350,-275,2,70))
-blocks.append(Block(280,-100,436,2))
-blocks.append(Block(450,-30,300,2))
-blocks.append(Block(200,-25,2,150))
+
+for block in level1:
+    x = block[0]
+    y = block[1]
+    width = block[2]
+    height = block[3]
+    blocks.append(Block(x, y, width, height))
 
 
 # ~ pen.goto(50,-20)
