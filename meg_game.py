@@ -214,29 +214,47 @@ for block in level1:
 
 
 #entrance to teleport
+entrances_location =((-595,-340, 3, 50),
+    (-595,200, 3, 50),
+    (-486,-120, 3, 50),
+    (-135,-145,3,50),
+    (55,-85,3,50),
+    (-185,-245,50,3),
+    (335,179,3,50),
+    (344,208,3,50),
+    (355,-280,3,50),
+    (595,-340,3,50),
+    (595,-5,3,50))
+
 entrances = []
-entrances.append(Block(-595,-340, 3, 50))
-entrances.append(Block(-595,200, 3, 50))
-entrances.append(Block(-486,-120, 3, 50))
-entrances.append(Block(-135,-145,3,50))
-entrances.append(Block(55,-85,3,50))
-entrances.append(Block(-185,-245,50,3))
-entrances.append(Block(335,179,3,50))
-entrances.append(Block(344,208,3,50))
-entrances.append(Block(355,-280,3,50))
-entrances.append(Block(595,-340,3,50))
-entrances.append(Block(595,-5,3,50))
+
+for entrance in entrances_location:
+    x = entrance[0]
+    y = entrance[1]
+    width = entrance[2]
+    height = entrance[3]
+    entrances.append(Block(x, y, width, height))
 
 for entrance in entrances:
     entrance.color = "red"
-
+    
 #exit of the teleport
+exits_location = ((-280,388,50,3),
+    (-150,-255,50,3),
+    (-272,93,50,3),
+    (100,388,50,3),
+    (264,-345,3,50))
+
 exits = []
-exits.append(Block(-280,388,50,3))
-exits.append(Block(-150,-255,50,3))
-exits.append(Block(-272,93,50,3))
-exits.append(Block(100,388,50,3))
-exits.append(Block(264,-345,3,50))
+
+for exit in exits_location:
+    x = exit[0]
+    y = exit[1]
+    width = exit[2]
+    height = exit[3]
+    exits.append(Block(x, y, width, height))
+
+
 for exit in exits:
     exit.color = "blue"
 
