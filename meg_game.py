@@ -347,72 +347,45 @@ while True:
     wn.update()
     pen.clear()
 
-    
-    # ~ print("x:"+str(player.xcor()) + " y: " + str(player.ycor()))
-    
-    
-        
-    if player.xcor()<=-585 and ((player.ycor()>=180 and player.ycor()<=210)or(player.ycor()>=-360 and player.ycor() <=-330)):
-        player.goto(-280,400)
+    def set_zero():
         player.dy = 0
         player.dx = 0
+    
+    if (player.xcor() == 589  and (player.ycor()>=-360  and player.ycor()<=-320)) or (player.xcor() == 351  and (player.ycor()>=190 and player.ycor()<=230)):
+        player.goto(257,-350)
+        set_zero()
         teleport_sound()
+        
+    elif (player.xcor() == 49  and (player.ycor()>=-100 and player.ycor()<=-80)) or (player.xcor() == 329  and (player.ycor()>=160 and player.ycor()<=200)):
+        player.goto(100,400)
+        set_zero()
+        teleport_sound()
+        
                     
     elif player.xcor() == -480  and (player.ycor()>=-144 and player.ycor()<=-95):
         player.goto(-147,-255)
-        player.dy = 0
-        player.dx = 0
-        teleport_sound()
-        
-    
-        
-    elif player.xcor() == 49  and (player.ycor()>=-100 and player.ycor()<=-80):
-        player.goto(100,400)
-        player.dy = 0
-        player.dx = 0
-        teleport_sound()
-        
-    elif (player.xcor() >= -220 and player.xcor() <= -151) and player.ycor() ==-240:
-        player.goto(-272,80)
-        player.dy = 0
-        player.dx = 0
+        set_zero()
         teleport_sound()
     
-    elif player.xcor() == -129  and (player.ycor()>=-162 and player.ycor()<=-120):
+    elif ((player.xcor() >= -220 and player.xcor() <= -151) and player.ycor() ==-240) or (player.xcor() == -129  and (player.ycor()>=-162 and player.ycor()<=-120)):
         player.goto(-272,80)
-        player.dy = 0
-        player.dx = 0
-        os.system('afplay goal.mp3&')
+        set_zero()
+        teleport_sound()
+        # os.system('afplay goal.mp3&')
         
-    elif player.xcor() == 329  and (player.ycor()>=160 and player.ycor()<=200):
-        player.goto(100,400)
-        player.dy = 0
-        player.dx = 0
+    elif (player.xcor()<=-585 and ((player.ycor()>=180 and player.ycor()<=210) or (player.ycor()>=-360 and player.ycor() <=-330))) or (player.xcor() == 589  and (player.ycor()>=-20  and player.ycor()<=20)):
+        player.goto(-280,400)
+        set_zero()
         teleport_sound()
-        
-    elif player.xcor() == 589  and (player.ycor()>=-360  and player.ycor()<=-320):
-        player.goto(257,-350)
-        player.dy = 0
-        player.dx = 0
-        teleport_sound()
-            
-    elif player.xcor() == 351  and (player.ycor()>=190 and player.ycor()<=230):
-        player.goto(257,-350)
-        player.dy = 0
-        player.dx = 0
-        teleport_sound()
+
     
     elif player.xcor() == 361  and (player.ycor()>=-300  and player.ycor()<=-260):
         player.goto(160,-30)
-        player.dy = 0
-        player.dx = 0
-        teleport_sound()
+        set_zero()
+        os.system('afplay goal.mp3&')
         
-    elif player.xcor() == 589  and (player.ycor()>=-20  and player.ycor()<=20):
-        player.goto(-280,400)
-        player.dy = 0
-        player.dx = 0
-        teleport_sound()
+    
         
 
 wn.mainloop()
+
